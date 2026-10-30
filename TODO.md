@@ -163,7 +163,7 @@ leaderboards, the logging/replay system (`/log` and `/replay` endpoints, `replay
 - [x] `static/index.html`: difficulty selector (Easy/Medium/Hard), New Game button, masked word, remaining attempts, previous guesses (correct and incorrect), Hangman drawing, and a status/message area.
 - [x] `static/style.css`: a responsive layout (flex/grid and a media query) that works on mobile and desktop widths.
 - [x] `static/app.js` (vanilla JS, no frameworks):
-  - [x] Use `fetch()` with JSON for all three endpoints, with relative URLs so it works locally and on Render.
+  - [ ] Use `fetch()` with JSON for all three endpoints, with relative URLs so it works locally and on Render. *(Corrected: the client uses POST create and POST guess only. GET is shown in the demo from the console. See README "Deviations".)*
   - [x] Build an on-screen A–Z keyboard.
   - [x] Support physical keyboard input (letters only; ignore other keys and modifier combos).
   - [x] Disable or mark letters that have already been guessed (correct vs. incorrect styling).
@@ -269,25 +269,25 @@ leaderboards, the logging/replay system (`/log` and `/replay` endpoints, `replay
 - [ ] `README.md`:
   - [x] Project overview and features.
   - [x] Live Render URL and GitHub URL.
-  - [ ] Tech stack and dependencies (`requirements.txt`).
+  - [x] Tech stack and dependencies (`requirements.txt`).
   - [x] Local setup: virtualenv, install, and run (`python server.py` / `flask run`).
   - [x] How to run tests (`pytest -v`).
-  - [ ] API documentation with example `curl` requests and JSON responses, including errors.
-  - [ ] Game rules and the duplicate/invalid-guess and post-game behavior.
+  - [x] API documentation with example `curl` requests and JSON responses, including errors.
+  - [x] Game rules and the duplicate/invalid-guess and post-game behavior.
   - [x] Project structure.
-  - [ ] Scope decisions: what was excluded from `Specification.md` and why. Any deviations.
+  - [x] Scope decisions: what was excluded from `Specification.md` and why. Any deviations.
   - [x] Deployment notes (Render, one worker, in-memory state).
   - [ ] Links to the report and the demo video.
-- [ ] `docs/report.pdf`: a 1–2 page development report covering design and architecture, the engine/API/client split, the testing approach and results, deployment, challenges and bugs fixed, how AI tools were used, and what was learned.
-  - [ ] Include 2–3 **actual** AI prompts used during development, quoted verbatim. For each one, give its purpose, what the AI produced, and how you verified or changed the result.
-  - [ ] Keep a running log of real prompts during Phases 1–6 so they can be quoted accurately.
+- [x] `docs/report.pdf`: a 1–2 page development report covering design and architecture, the engine/API/client split, the testing approach and results, deployment, challenges and bugs fixed, how AI tools were used, and what was learned.
+  - [x] Include 2–3 **actual** AI prompts used during development, quoted verbatim. For each one, give its purpose, what the AI produced, and how you verified or changed the result.
+  - [ ] Keep a running log of real prompts during Phases 1–6 so they can be quoted accurately. *(No separate log kept. The prompts in the report are quoted from the Claude Code session.)*
 - [ ] Demo video (2–3 minutes), link in the README. It must show:
   - [ ] **Gameplay** on the live HTTPS site: all three difficulties, both keyboards, correct and incorrect guesses, and the drawing.
   - [ ] A win and a loss with their messages.
   - [ ] **Replay:** starting another game with New Game, without a page reload.
   - [ ] **Chrome DevTools → Network:** the request and response JSON for create, guess, and get state, the HTTP status codes (including one error), and proof that `word` is absent while playing.
   - [ ] Optional: a brief `pytest -v` run.
-- [ ] Verify a fresh clone works by following only the README (new directory, new virtualenv).
+- [x] Verify a fresh clone works by following only the README (new directory, new virtualenv). *(Verified on commit 1b91b1a: clone, venv, install, 103 tests passed.)*
 - [ ] Final commit and push. Confirm the Render deployment is live at submission time.
 - [ ] Submit every item in "Submission Requirements" below by the deadline.
 
@@ -298,7 +298,7 @@ leaderboards, the logging/replay system (`/log` and `/replay` endpoints, `replay
 
 ### Tests
 
-- [ ] Fresh-clone run-through completed.
+- [x] Fresh-clone run-through completed.
 - [ ] Every link in the README (Render, GitHub, video, report) opens correctly in a private/incognito window.
 - [ ] The report PDF is 1–2 pages and contains 2–3 actual prompts. The video is 2–3 minutes.
 
