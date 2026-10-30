@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hangman</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>Hangman</h1>
+      <form class="controls" id="new-game-form">
+        <label for="difficulty">Difficulty</label>
+        <select id="difficulty" name="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <button type="submit" id="new-game">New Game</button>
+      </form>
+    </header>
+
+    <p id="error" class="error" role="alert" hidden></p>
+
+    <section class="board">
+      <svg id="drawing" class="drawing" viewBox="0 0 200 240" role="img" aria-labelledby="drawing-label">
+        <title id="drawing-label">Hangman drawing: 0 of 6 parts</title>
+        <g class="gallows">
+          <line x1="20" y1="230" x2="180" y2="230"/>
+          <line x1="60" y1="230" x2="60" y2="20"/>
+          <line x1="60" y1="20" x2="140" y2="20"/>
+          <line x1="60" y1="55" x2="95" y2="20"/>
+          <line x1="140" y1="20" x2="140" y2="50"/>
+        </g>
+        <g class="figure">
+          <circle class="part" cx="140" cy="70" r="20"/>
+          <line class="part" x1="140" y1="90" x2="140" y2="150"/>
+          <line class="part" x1="140" y1="105" x2="115" y2="132"/>
+          <line class="part" x1="140" y1="105" x2="165" y2="132"/>
+          <line class="part" x1="140" y1="150" x2="118" y2="192"/>
+          <line class="part" x1="140" y1="150" x2="162" y2="192"/>
+        </g>
+      </svg>
+
+      <div class="info">
+        <p class="meta">Current game: <strong id="game-difficulty">—</strong></p>
+        <div id="pattern" class="pattern" aria-live="polite" aria-label="Word"></div>
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+        <dl class="stats">
+          <div>
+            <dt>Remaining attempts</dt>
+            <dd><span id="remaining">6</span> / <span id="max-incorrect">6</span></dd>
+          </div>
+          <div>
+            <dt>Correct guesses</dt>
+            <dd id="correct-letters" class="letters">—</dd>
+          </div>
+          <div>
+            <dt>Incorrect guesses</dt>
+            <dd id="incorrect-letters" class="letters">—</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="keyboard" class="keyboard" aria-label="Letter keyboard"></section>
+    <p class="hint">Click a letter or type on your keyboard.</p>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
