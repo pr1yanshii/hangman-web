@@ -4,8 +4,8 @@ A web-based Hangman game for CSE 4095. A Python game engine and a Flask REST API
 A vanilla HTML/CSS/JavaScript client runs in the browser. The server is authoritative: the hidden word
 is never sent to the browser until the game ends.
 
-- **Live site:** _to be added after Render deployment_
-- **Repository:** _to be added after pushing to GitHub_
+- **Live site:** <https://hangman-web-0je9.onrender.com>
+- **Repository:** <https://github.com/pr1yanshii/hangman-web>
 
 ## Features
 
@@ -34,7 +34,7 @@ requirements.txt   Pinned dependencies (Flask, Gunicorn, pytest)
 Requires Python 3.13 (3.10+ should work).
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/pr1yanshii/hangman-web.git
 cd hangman-web
 python3 -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate

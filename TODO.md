@@ -234,12 +234,12 @@ leaderboards, the logging/replay system (`/log` and `/replay` endpoints, `replay
 
 ### Tasks
 
-- [ ] `git init`, make meaningful incremental commits, and push to a GitHub repository.
+- [ ] `git init`, make meaningful incremental commits, and push to a GitHub repository. *(Pushed to `main`; only 1 commit so far.)*
 - [x] Confirm the repository contains no secrets, virtualenvs, or cache files.
-- [ ] Make the repository accessible to the grader (public, or shared as the course requires).
-- [ ] Create a Render Web Service connected to the repository:
-  - [ ] Runtime: Python 3. Build command: `pip install -r requirements.txt`
-  - [ ] Start command: `gunicorn server:app --workers 1 --bind 0.0.0.0:$PORT` (one worker, because games are stored in memory)
+- [x] Make the repository accessible to the grader (public, or shared as the course requires).
+- [x] Create a Render Web Service connected to the repository:
+  - [ ] Runtime: Python 3. Build command: `pip install -r requirements.txt` *(Confirm in the Render dashboard.)*
+  - [ ] Start command: `gunicorn server:app --workers 1 --bind 0.0.0.0:$PORT` (one worker, because games are stored in memory) *(Confirm in the Render dashboard.)*
   - [x] Optional: pin the Python version (`.python-version` or the `PYTHON_VERSION` environment variable).
 - [x] Note in the README that free-tier restarts and idle spin-down erase in-memory games and that the first load may be slow.
 
@@ -252,8 +252,8 @@ leaderboards, the logging/replay system (`/log` and `/replay` endpoints, `replay
 
 ### Tests
 
-- [ ] Smoke test against the deployed URL with `curl`: create a game → guess → get state.
-- [ ] Deployed error responses (400/404/409) match local behavior.
+- [x] Smoke test against the deployed URL with `curl`: create a game → guess → get state.
+- [x] Deployed error responses (400/404/409) match local behavior.
 - [ ] Re-run the key Phase 4 checks (play, New Game, DevTools no-leak, mobile width) on the deployed site.
 
 ### Deliverables
@@ -268,7 +268,7 @@ leaderboards, the logging/replay system (`/log` and `/replay` endpoints, `replay
 
 - [ ] `README.md`:
   - [x] Project overview and features.
-  - [ ] Live Render URL and GitHub URL.
+  - [x] Live Render URL and GitHub URL.
   - [ ] Tech stack and dependencies (`requirements.txt`).
   - [x] Local setup: virtualenv, install, and run (`python server.py` / `flask run`).
   - [x] How to run tests (`pytest -v`).
@@ -340,8 +340,8 @@ Tick an item only after it is verified.
 - [x] Responsive browser interface
 - [x] Automated tests (pytest)
 - [ ] Manual tests (documented)
-- [ ] GitHub repository
-- [ ] Public Render deployment
+- [x] GitHub repository
+- [x] Public Render deployment
 
 ### Testing Requirements
 
@@ -360,11 +360,11 @@ Tick an item only after it is verified.
 ### Submission Requirements
 
 - [ ] GitHub repository with the complete source code and word lists (`words/*.txt`)
-- [ ] Original `Specification.md`, unchanged
+- [x] Original `Specification.md`, unchanged
 - [ ] Revised `TODO.md` (original kept as `TODO_original.md`)
 - [ ] `README.md`
-- [ ] `requirements.txt`
-- [ ] Public HTTPS deployment URL (Render)
+- [x] `requirements.txt`
+- [x] Public HTTPS deployment URL (Render)
 - [ ] 1–2 page PDF development report
 - [ ] 2–3 actual AI prompts, included in the PDF report
 - [ ] 2–3 minute demonstration video: gameplay
